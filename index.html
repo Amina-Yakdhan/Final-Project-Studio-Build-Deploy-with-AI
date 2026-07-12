@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="StreamBox">
+    <title>StreamBox — Discover Movies</title>
+    <meta name="description" content="Trending, popular, and top-rated movies powered by TMDB.">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="navbar-left">
+        <h1 class="logo">🎬 StreamBox</h1>
+        <nav class="menu">
+            <a href="#trending" class="menu-item">Trending</a>
+            <a href="#popular" class="menu-item">Popular</a>
+            <a href="#top" class="menu-item">Top Rated</a>
+            <a href="#soon" class="menu-item">Coming Soon</a>
+        </nav>
+    </div>
+    <input type="search" id="search" placeholder="Search movies...">
+</header>
+
+<!-- HERO (populated from TMDB) -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <span class="badge">Featured</span>
+        <h2 id="heroTitle">Loading…</h2>
+        <p id="heroDesc"></p>
+        <a id="heroBtn" href="#" target="_blank" rel="noreferrer" class="hero-btn">▶ Watch on TMDB</a>
+    </div>
+</section>
+
+<!-- MOVIE SECTIONS (rendered by JS) -->
+<section id="app"></section>
+
+<footer class="footer">
+    Movie data provided by
+    <a href="https://www.themoviedb.org" target="_blank" rel="noreferrer">The Movie Database (TMDB)</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
